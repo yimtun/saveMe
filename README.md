@@ -21,6 +21,36 @@ a client for save docker iamge   with the    remote  docker-engine  from   image
 
 
 
+#### for linux
+
+```
+GOOS=linux  GOARCH=amd64 go build  saveMe.go
+```
+
+
+
+#### for mac
+
+
+
+```
+GOOS=darwin  GOARCH=amd64 go build  saveMe.go
+```
+
+
+
+#### for windows
+
+
+
+```
+GOOS=windows  GOARCH=amd64 go build  saveMe.go
+```
+
+
+
+
+
 
 
 ### usage
