@@ -2,12 +2,9 @@ package main
 
 // go doc  github.com/docker/docker/api/types  ImageSummary
 
-//  build
-
-// GOOS=linux  GOARCH=amd64 go build  simg.go
 
 
-// /simg.exe -i hub.xxx.cn/xxx/busybox:v1   -h 10.0.x.xx:2375  -u xxx -p xx
+
 
 
 import (
@@ -78,7 +75,7 @@ func main() {
 
 	flag.StringVar(&image,"i","","镜像")
 
-	flag.StringVar(&host,"h","","docker 引擎地址")
+	flag.StringVar(&host,"h","","docker engine ip:port")
 
 	flag.StringVar(&username,"u","","镜像仓库用户名")
 

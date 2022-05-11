@@ -57,3 +57,52 @@ GOOS=windows  GOARCH=amd64 go build  saveMe.go
 
 
 
+config a remote docker engine server
+
+
+
+```
+edit file
+
+vim /lib/systemd/system/docker.service
+
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+
+
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock -H tcp://0.0.0.0:2375
+
+
+
+
+systemctl  restart docker
+
+systemctl daemon-reload
+
+docker -H 127.0.0.1:2375  info
+```
+
+
+
+ex:
+
+```
+sudo ./saveme -i hub.xxx.cn/nginx:1.16-alpine  -h 172.16.100.7:2375 -u image-repo-usename -p image-repo-passwd
+```
+
+
+
+
+
+
+
+### test image tar
+
+
+
+on docker engine server 
+
+```
+docker load  -i ./nginx-1.16-alpine.tar 
+```
+
