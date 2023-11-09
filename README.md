@@ -101,7 +101,7 @@ sudo ./saveme -i hub.xxx.cn/nginx:1.16-alpine  -h 172.16.100.7:2375 -u image-rep
 
 
 
-
+windows 平台推荐使用 git bash 终端
 
 
 
